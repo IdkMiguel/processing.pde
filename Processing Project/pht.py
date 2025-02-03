@@ -72,6 +72,19 @@ def display_text(text):
 while True:
   pressure = pht.pressure
   print(pressure)
+  display_text(str(pressure) + "hpa")
+
+  tempC = (tmp.value / 65535 * 3.5 - 0.5) * 100
+  print(pressure)
   display_text(str(pressure) + "hPa")
+
+  tempF = (tempC * 9/5) + 32
+  tempF = (int(tempF * 100) / 100)
+  print(tempF)
+  display_text(str(pressure) + "Fa")
+
+  humid = pht_relative_humidity
+  print(humid)
+  display_text(str(pressure) + "%")
   
   
